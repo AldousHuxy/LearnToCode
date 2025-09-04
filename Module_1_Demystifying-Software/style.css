@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --mhfd-dark-blue: #06242D;
+    --mhfd-purple: #80A7F7;
+    --mhfd-blue: #62b4cc;
+    --medium-green: #29C499;
+    --medium-taupe: #A29F8B;
+    --soft-purple: #191533;
+    --soft-blue: #66D4FF;
+    --soft-teal: #66E0D5;
+    --bright-yellow: #FFDD00;
+    --deep-purple: #251863;
+    --deep-blue: #0079A8;
+    --deep-green: #1C8281;
+    --deep-taupe: #787263;
+    --mhfd-gradient: linear-gradient(90deg, var(--mhfd-purple), var(--mhfd-blue));
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    color: white;
+}
+
+header {
+    background: var(--mhfd-dark-blue);
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header h2 {
+    margin: auto 0;
+    font-size: 1.5rem;
+}
+
+header span {
+    color: var(--bright-yellow);
+}
+
+section {
+    opacity: 0.9;
+    background-color: var(--mhfd-dark-blue);
+    border: var(--mhfd-dark-blue) 2px solid;
+    border-radius: 8px;
+    padding: 4px;
+    margin: 10px 0;
+}
+
+section h1, section h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--bright-yellow);
+}
+
+section p {
+    font-size: 1.2rem;
+    color: white;
+    padding: 10px;
+    line-height: 1.5;
+}
+
+#hero, #main {
+    padding: 20px;
+    border: var(--mhfd-dark-blue) 2px solid;
+    border-radius: 8px;
+    background: var(--mhfd-gradient);
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main button {
+    background: var(--medium-green);
+    color: white;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+#main .hidden {
+    display: none;
+}
+
+#main .show {
+    display: block;
+}
+
+#main button:hover {
+    background: var(--soft-teal);
+}

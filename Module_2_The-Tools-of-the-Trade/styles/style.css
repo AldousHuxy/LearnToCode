@@ -1,0 +1,246 @@
+@font-face {
+  font-family: "Aptos Serif";
+  src: url("../fonts/Aptos-Serif.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Aptos Serif Bold";
+  src: url("../fonts/Aptos-Serif-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Aptos Serif Italic";
+  src: url("../fonts/Aptos-Serif-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Aptos Serif", serif;
+}
+
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+:root {
+  --mhfd-dark-blue: #06242D;
+  --mhfd-purple: #80A7F7;
+  --mhfd-blue: #62b4cc;
+  --medium-green: #29C499;
+  --medium-taupe: #A29F8B;
+  --soft-purple: #191533;
+  --soft-blue: #66D4FF;
+  --soft-teal: #66E0D5;
+  --bright-yellow: #FFDD00;
+  --deep-purple: #251863;
+  --deep-blue: #0079A8;
+  --deep-green: #1C8281;
+  --deep-taupe: #787263;
+  --mhfd-gradient: linear-gradient(90deg, var(--mhfd-purple), var(--mhfd-blue));
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  height: 100%;
+  flex: 1;
+}
+
+header {
+  color: white;
+  background-color: var(--mhfd-dark-blue);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+header nav {
+  display: flex;
+  align-items: center;
+}
+header nav img {
+  margin-right: 1rem;
+}
+header h2 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+header h2 span {
+  font-size: xx-large;
+  background-color: var(--bright-yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+footer {
+  background-color: var(--mhfd-dark-blue);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+footer p {
+  margin: 0;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  padding: 1rem;
+}
+.search input[type=text] {
+  padding: 0.5rem;
+  border: 1px solid var(--mhfd-dark-blue);
+  border-radius: 4px;
+  width: 300px;
+  margin-right: 0.5rem;
+}
+.search button {
+  padding: 0.5rem 1rem;
+  background: var(--mhfd-dark-blue);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.search button:hover {
+  background: var(--mhfd-purple);
+}
+
+.hero {
+  margin-top: 1rem;
+  border-bottom: 3px solid var(--mhfd-dark-blue);
+  background: var(--mhfd-gradient);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.25rem;
+  font-style: italic;
+}
+
+.history {
+  margin-top: 1rem;
+  background: var(--mhfd-blue);
+  border-bottom: 3px solid var(--mhfd-dark-blue);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+.history h2 {
+  color: var(--mhfd-dark-blue);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.history .history-block {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+.history .history-block ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+.history .history-block ul li {
+  margin-bottom: 0.5rem;
+}
+.history .history-block p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+#cardList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  overflow-y: auto;
+  max-height: 50vh;
+  padding-top: 1rem;
+}
+#cardList .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  cursor: pointer;
+  text-align: center;
+  background: white;
+  border: 1px solid var(--mhfd-dark-blue);
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+#cardList .card h3 {
+  color: white;
+  padding: 0.25rem;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: var(--mhfd-dark-blue);
+  margin-bottom: 0.5rem;
+}
+#cardList .card h3 span {
+  font-size: small;
+  color: var(--bright-yellow);
+}
+#cardList .card .card-difficulty {
+  display: flex;
+  justify-content: end;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin: 0 1rem;
+}
+#cardList .card .card-difficulty.easy {
+  color: green;
+}
+#cardList .card .card-difficulty.medium {
+  color: orange;
+}
+#cardList .card .card-difficulty.hard {
+  color: red;
+}
+#cardList .card-flex {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem 0 1rem;
+}
+#cardList .card p {
+  color: var(--mhfd-dark-blue);
+}
+#cardList .card p.card-description {
+  font-style: italic;
+  padding: 0.5rem;
+}
+#cardList .card p.card-popularity, #cardList .card p.card-cost {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+#cardList .card p.card-popularity span, #cardList .card p.card-cost span {
+  font-size: large;
+}
+#cardList .card:hover {
+  transform: translateY(-5px);
+}
+
+#resultCount {
+  display: flex;
+  justify-content: end;
+  margin: 0.5rem 0;
+}
+#resultCount span {
+  margin: 0 4px;
+  font-weight: bold;
+  color: var(--mhfd-dark-blue);
+}/*# sourceMappingURL=style.css.map */

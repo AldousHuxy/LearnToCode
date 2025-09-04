@@ -1,0 +1,25 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    background: var(--mhfd-dark-blue);
+    padding: 1rem;
+    color: white;
+    text-align: center;
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+    }
+
+    img {
+        height: 50px;
+        margin-right: 1rem;
+    }
+
+    span {
+        font-size: xx-large;
+        background-color: var(--bright-yellow);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
