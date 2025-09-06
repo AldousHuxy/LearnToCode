@@ -1,0 +1,1 @@
+export type LogicGate = 'AND' | 'OR' | 'NOT' | 'NAND'
