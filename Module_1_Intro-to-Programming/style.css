@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #000000;
+    background-color: #d0d0d0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+hr {
+    margin: 10px 0;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08), 0 1.5px 4px rgba(0,0,0,0.04);
+}
+
+section div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+section button {
+    cursor: pointer;
+    margin-left: auto;
+    padding: 6px 12px;
+    font-size: 0.9em;
+    background-color: #e0dfdf;
+    border: 1px solid #c0c0c0;
+    border-radius: 4px;
+}
+
+section button:hover {
+    background-color: #d0d0d0;
+    border-color: #adadad;
+    color: #000000;
+}
+
+section h2 {
+    font-size: 1.5em;
+    margin-bottom: 8px;
+}
+
+section h4 {
+    font-size: 0.8em;
+    font-style: italic;
+    margin-bottom: 2px;
+    padding: 4px 8px;
+}
+
+section p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+section span {
+    font-weight: bold;
+}
+
+section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+section ul li {
+    margin-bottom: 5px;
+}
+
+section ul li a {
+    color: blue;
+    text-decoration: underline;
+}
+
+section ul li a:hover {
+    color: darkblue;
+}
+
+code {
+    display: block;
+    color: white;
+    background-color: black;
+    margin: 10px 0;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
