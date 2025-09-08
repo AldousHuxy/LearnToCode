@@ -7,7 +7,7 @@ import { ORGate } from './ORGate';
 const LogicGates = () => {
   return (
     <>
-      <h1 className="text-center text-2xl font-bold mb-4">Boolean Logic Gates: the neurons of a computer</h1>
+      <h1 className="text-4xl font-bold mb-4 text-center text-mhfd-dark-blue">Gateway to Complexity</h1>
       <div className="p-4 grid grid-cols-2 gap-4">
         {withLogicGate('AND', <ANDGate />)}
         {withLogicGate('OR', <ORGate />)}

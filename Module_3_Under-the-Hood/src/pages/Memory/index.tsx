@@ -1,39 +1,53 @@
-import { useState } from 'react';
+import { InfoCard } from "@/components/InfoCard";
+
+const tableRows = [
+  { binary: '0000000', decimal: 0, character: 'NUL', description: 'Null character' },
+  { binary: '1000000', decimal: 64, character: '@', description: 'At symbol' },
+  { binary: '1000001', decimal: 65, character: 'A', description: 'Uppercase A' },
+  { binary: '1000010', decimal: 66, character: 'B', description: 'Uppercase B' },
+  { binary: '1000011', decimal: 67, character: 'C', description: 'Uppercase C' },
+  { binary: '1100001', decimal: 97, character: 'a', description: 'Lowercase a' },
+  { binary: '1100010', decimal: 98, character: 'b', description: 'Lowercase b' },
+  { binary: '1100011', decimal: 99, character: 'c', description: 'Lowercase c' },
+  { binary: '1100011', decimal: 123, character: '{', description: 'Left curly brace' },
+  { binary: '1100011', decimal: 124, character: '|', description: 'Vertical bar' },
+  { binary: '1100011', decimal: 125, character: '}', description: 'Right curly brace' },
+  { binary: '1100011', decimal: 126, character: '~', description: 'Tilde' },
+  { binary: '1100011', decimal: 127, character: 'DEL', description: 'Delete' }
+]
 
 const Memory = () => {
-  const [wire, setWire] = useState<boolean>(false)
-
-  const controlWire = wire ? '#2ECC40' : '#FF4136' // red/green
-  const outputWire = wire ? '#2ECC40' : '#FF4136' // red/green
-  const wireLabel = wire ? 'ON' : 'OFF'
-
-  const toggleWire = () => setWire(prev => !prev)
-
   return (
-    <div>
-      <h1 className="text-2xl text-center font-bold mb-4">The Transistor</h1>
-      <div className="flex flex-col justify-between items-center">
-        <button
-          onClick={toggleWire}
-          className={`px-4 py-2 mb-4 font-semibold text-white rounded ${wire ? 'bg-green-600 hover:bg-green-700' : 'bg-red-600 hover:bg-red-700'}`}
-        >
-          {wireLabel}
-        </button>
-      </div>
-      <svg width="300" height="200" viewBox="0 0 300 200">
-        {/* Wires */}
-        <line x1="50" y1="100" x2="120" y2="100" stroke={controlWire} strokeWidth="4" />
-        <line x1="250" y1="60" x2="180" y2="100" stroke="#2ECC40" strokeWidth="4" />
-        <line x1="250" y1="140" x2="180" y2="100" stroke={outputWire} strokeWidth="4" />
-        {/* Transistor body */}
-        <rect x="120" y="80" width="60" height="40" rx="10" fill="#333" />
-        {/* Base, collector, emitter labels */}
-        <text x="30" y="90" fontSize="14" fill="#333">Input Wire</text>
-        <text x="225" y="55" fontSize="14" fill="#333">Flow Wire</text>
-        <text x="225" y="155" fontSize="14" fill="#333">Output Wire</text>
-      </svg>
-    </div>
-  );
+    <>
+      <h1 className="text-4xl font-bold mb-4 text-center text-mhfd-dark-blue">The Bits and Bytes</h1>
+      <InfoCard list={[
+        <>A bit is the smallest unit of data in a computer and can have a value of either 0 or 1.</>,
+        <>8 bits make up a byte, which can represent 256 (2<sup>8</sup>) different values (from 0 to 255).</>,
+        <>ASCII stands for American Standard Code for Information Interchange.</>,
+        <>It is a character encoding standard that uses 7 bits to represent characters.</>
+      ]} />
+      <table className="table-auto w-full border-collapse border border-mhfd-dark-blue text-mhfd-dark-blue mb-4">
+        <thead>
+          <tr className="bg-mhfd-dark-blue text-white">
+            <th className="border border-mhfd-dark-blue p-2">Binary</th>
+            <th className="border border-mhfd-dark-blue p-2">Decimal</th>
+            <th className="border border-mhfd-dark-blue p-2">Character</th>
+            <th className="border border-mhfd-dark-blue p-2">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          {tableRows.map(row => (
+            <tr key={row.binary} className="border border-mhfd-dark-blue">
+              <td className="border border-mhfd-dark-blue p-2 text-center font-bold">{row.binary}</td>
+              <td className="border border-mhfd-dark-blue p-2 text-center font-bold">{row.decimal}</td>
+              <td className="border border-mhfd-dark-blue p-2 text-center font-bold">{row.character}</td>
+              <td className="border border-mhfd-dark-blue p-2 text-center font-bold">{row.description}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </>
+  )
 }
 
 export default Memory;
