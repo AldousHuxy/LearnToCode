@@ -130,20 +130,18 @@ footer p {
 }
 
 .history {
-  margin-top: 1rem;
   background: var(--mhfd-blue);
   border-bottom: 3px solid var(--mhfd-dark-blue);
   color: white;
-  padding: 1rem;
   text-align: center;
+  padding: 1rem;
 }
 .history h2 {
   color: var(--mhfd-dark-blue);
   text-align: center;
-  margin-bottom: 1rem;
 }
 .history .history-block {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   text-align: left;
 }
@@ -155,8 +153,6 @@ footer p {
   margin-bottom: 0.5rem;
 }
 .history .history-block p {
-  margin-top: 1rem;
-  font-size: 1.2rem;
   font-style: italic;
 }
 
@@ -226,6 +222,14 @@ footer p {
 }
 #cardList .card p.card-popularity span, #cardList .card p.card-cost span {
   font-size: large;
+}
+#cardList .card p.card-cost {
+  display: flex;
+  align-items: baseline;
+}
+#cardList .card p.card-cost .card-cost-cent {
+  font-size: small;
+  margin-left: 2px;
 }
 #cardList .card:hover {
   transform: translateY(-5px);

@@ -19,7 +19,7 @@ const PROGRAMMING_LANGUAGES = [
     },
     {
         title: 'TypeScript',
-        description: 'JavaScript with static typing.',
+        description: 'Superset of JavaScript with static typing.',
         maintainer: 'Microsoft',
         created: '2012',
         popularity: 4.2,
@@ -214,6 +214,42 @@ const PROGRAMMING_LANGUAGES = [
         popularity: 2.5,
         cost: 3.00,
         difficulty: 'hard'
+    },
+    {
+        title: 'Lua',
+        description: 'Lightweight scripting language.',
+        maintainer: 'Roberto Ierusalimschy',
+        created: '1993',
+        popularity: 3.0,
+        cost: 5.00,
+        difficulty: 'medium'
+    },
+    {
+        title: 'COBOL',
+        description: 'Business-oriented language.',
+        maintainer: 'CODASYL',
+        created: '1959',
+        popularity: 2.8,
+        cost: 4.50,
+        difficulty: 'medium'
+    },
+    {
+        title: 'Fortran',
+        description: 'Numerical and scientific computing.',
+        maintainer: 'Various',
+        created: '1957',
+        popularity: 2.9,
+        cost: 4.80,
+        difficulty: 'medium'
+    },
+    {
+        title: 'Groovy',
+        description: 'Dynamic language for the JVM.',
+        maintainer: 'Apache Software Foundation',
+        created: '2003',
+        popularity: 2.7,
+        cost: 5.60,
+        difficulty: 'medium'
     }
 ]
 
@@ -227,7 +263,7 @@ const appendCardList = (language) => {
             <p class="card-maintainer">Maintained by ${language.maintainer}</b></p>
             <div class="card-flex">
                 <p class="card-popularity">${language.popularity} / 5</p>
-                <p class="card-cost">$<span>${language.cost.toFixed(2)}</span></p>
+                <p class="card-cost">${formatCost(language.cost)}</p>
             </div>
         </div>
     `);
@@ -240,6 +276,12 @@ const renderCardList = (languages) => {
     languages.forEach(appendCardList);
 }
 
+const formatCost = (cost) => {
+    const costStr = cost.toString()
+    const dollarPart = costStr.split('.')[0]
+    const centPart = costStr.split('.')[1] || '00'
+    return `$<span>${dollarPart}.</span><span class="card-cost-cent">${centPart.padEnd(2, '0')}</span>`
+}
 
 $('input[type="text"]').on('input', function() {
     const searchTerm = $(this).val().toLowerCase()
