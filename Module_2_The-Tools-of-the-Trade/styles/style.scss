@@ -182,7 +182,7 @@ footer {
     max-height: 50vh;
     padding-top: 1rem;
 
-    .card {
+    button {
         display: flex;
         flex-direction: column;
         height: 100%;
@@ -192,14 +192,15 @@ footer {
         border: 1px solid var(--mhfd-dark-blue);
         border-radius: 8px;
         transition: transform 0.2s;
+        padding: 0;
         
         h3 {
             color: white;
-            padding: 0.25rem;
             border-top-left-radius: 8px;
             border-top-right-radius: 8px;
             background-color: var(--mhfd-dark-blue);
             margin-bottom: 0.5rem;
+            padding: 0.25rem;
 
             span {
                 font-size: small;
@@ -227,7 +228,7 @@ footer {
             color: red;
         }
 
-        &-flex {
+        .card-flex {
             margin-top: auto;
             display: flex;
             justify-content: space-between;
@@ -277,5 +278,102 @@ footer {
         margin: 0 4px;
         font-weight: bold;
         color: var(--mhfd-dark-blue);
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+    .modal-content {
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        max-width: 600px;
+        width: 90%;
+        position: relative;
+        max-height: 80vh;
+        overflow-y: auto;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        h2 {
+            color: var(--mhfd-dark-blue);
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 0.75rem;
+            color: var(--mhfd-dark-blue);
+
+            strong {
+                font-weight: bold;
+            }
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin-bottom: 1rem;
+
+            code {
+                font-family: 'Courier New', Courier, monospace;
+                color: var(--mhfd-dark-blue);
+            }
+        }
+
+        .modal-image {
+            max-width: 100px;
+            display: block;
+            margin: 0 auto 1rem auto;
+        }
+
+        .card-difficulty {
+            display: inline;
+            font-weight: bold;
+            text-transform: capitalize;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+
+            &.easy {
+                color: green;
+                background-color: rgba(0, 128, 0, 0.1);
+            }
+
+            &.medium {
+                color: orange;
+                background-color: rgba(255, 165, 0, 0.1);
+            }
+
+            &.hard {
+                color: red;
+                background-color: rgba(255, 0, 0, 0.1);
+            }
+        }
+    }
+
+    .modal-close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #666;
+        transition: color 0.2s;
+
+        &:hover {
+            color: var(--mhfd-dark-blue);
+        }
     }
 }

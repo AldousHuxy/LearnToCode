@@ -1,31 +1,25 @@
 # Learn To Code with Justin Howard
 
-## Welcome & Objectives (0:00 - 0:05)
+### Welcome & Objectives (0:00 - 0:05)
+ - Allow people to get settled
 
-## Module 1 - Demystifying Software (0:05 - 0:10)
-#### THEME: `Early Internet (1994 - 2006)`
-#### TECH: HTML/CSS/JS
-#### DEMO: Birth of the Internet Blog
+### Module 1 - Intro to Programming (0:05 - 0:10)
+ - Cover some obscure terms that people may have heard about
+ - Highlight the interactive portion of the presentation
+ - Share some interesting facts about the history of computers
 
-## Module 2 - The Tools of the Trade (0:10 - 0:15)
-#### THEME: `FAANG (2007 - 2012)`
-#### TECH: SCSS/jQuery
-#### DEMO: Programming Language eCommerce Site
+### Module 2 - The Tools of the Trade (0:10 - 0:15)
+ - Understand why there are so many programming languages
 
-## Module 3 - Under The Hood (0:15 - 0:20)
-#### THEME: `The Cloud (2013 - 2017)`
-#### TECH: JS/Bootstrap
-#### DEMO: Binary counter & Logic gates
+### Module 3 - Under The Hood (0:15 - 0:20)
+ - Talk about various counting systems and why binary is optimal
+ - Explore logic gates the building blocks of computers
+ - Understand levels of abstraction
 
-## Module 4 - A Day In The Life (0:20 - 0:25)
-#### THEME: `Social Media (2018 - 2022)`
-#### TECH: React/Tailwind/TS
-#### DEMO: Map
+### Module 4 - A Day In The Life (0:20 - 0:25)
+ - 
 
-## Module 5 - Behind The Scenes:  (0:25 - 0:30)
-#### THEME: `Artificial Intelligence (2023 - Today)`
-#### TECH: Node/Express/TS
-#### DEMO: Chatbot
+### Module 5 - Behind The Scenes:  (0:25 - 0:30)
 
 ### Interactive Project (0:30 - 0:50)
 

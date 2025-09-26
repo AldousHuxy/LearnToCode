@@ -4,16 +4,10 @@ const tableRows = [
   { binary: '0000000', decimal: 0, character: 'NUL', description: 'Null character' },
   { binary: '1000000', decimal: 64, character: '@', description: 'At symbol' },
   { binary: '1000001', decimal: 65, character: 'A', description: 'Uppercase A' },
-  { binary: '1000010', decimal: 66, character: 'B', description: 'Uppercase B' },
-  { binary: '1000011', decimal: 67, character: 'C', description: 'Uppercase C' },
   { binary: '1100001', decimal: 97, character: 'a', description: 'Lowercase a' },
-  { binary: '1100010', decimal: 98, character: 'b', description: 'Lowercase b' },
-  { binary: '1100011', decimal: 99, character: 'c', description: 'Lowercase c' },
   { binary: '1100011', decimal: 123, character: '{', description: 'Left curly brace' },
   { binary: '1100011', decimal: 124, character: '|', description: 'Vertical bar' },
-  { binary: '1100011', decimal: 125, character: '}', description: 'Right curly brace' },
-  { binary: '1100011', decimal: 126, character: '~', description: 'Tilde' },
-  { binary: '1100011', decimal: 127, character: 'DEL', description: 'Delete' }
+  { binary: '1100011', decimal: 126, character: '~', description: 'Tilde' }
 ]
 
 const Memory = () => {

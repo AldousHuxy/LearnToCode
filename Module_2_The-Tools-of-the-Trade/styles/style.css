@@ -164,7 +164,7 @@ footer p {
   max-height: 50vh;
   padding-top: 1rem;
 }
-#cardList .card {
+#cardList button {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -174,64 +174,65 @@ footer p {
   border: 1px solid var(--mhfd-dark-blue);
   border-radius: 8px;
   transition: transform 0.2s;
+  padding: 0;
 }
-#cardList .card h3 {
+#cardList button h3 {
   color: white;
-  padding: 0.25rem;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   background-color: var(--mhfd-dark-blue);
   margin-bottom: 0.5rem;
+  padding: 0.25rem;
 }
-#cardList .card h3 span {
+#cardList button h3 span {
   font-size: small;
   color: var(--bright-yellow);
 }
-#cardList .card .card-difficulty {
+#cardList button .card-difficulty {
   display: flex;
   justify-content: end;
   font-weight: bold;
   text-transform: capitalize;
   margin: 0 1rem;
 }
-#cardList .card .card-difficulty.easy {
+#cardList button .card-difficulty.easy {
   color: green;
 }
-#cardList .card .card-difficulty.medium {
+#cardList button .card-difficulty.medium {
   color: orange;
 }
-#cardList .card .card-difficulty.hard {
+#cardList button .card-difficulty.hard {
   color: red;
 }
-#cardList .card-flex {
+#cardList button .card-flex {
   margin-top: auto;
   display: flex;
   justify-content: space-between;
   padding: 0 1rem 0 1rem;
 }
-#cardList .card p {
+#cardList button p {
   color: var(--mhfd-dark-blue);
 }
-#cardList .card p.card-description {
+#cardList button p.card-description {
   font-style: italic;
   padding: 0.5rem;
 }
-#cardList .card p.card-popularity, #cardList .card p.card-cost {
+#cardList button p.card-popularity, #cardList button p.card-cost {
   font-weight: bold;
   margin-top: 0.5rem;
 }
-#cardList .card p.card-popularity span, #cardList .card p.card-cost span {
+#cardList button p.card-popularity span, #cardList button p.card-cost span {
   font-size: large;
 }
-#cardList .card p.card-cost {
+#cardList button p.card-cost {
   display: flex;
   align-items: baseline;
 }
-#cardList .card p.card-cost .card-cost-cent {
+#cardList button p.card-cost .card-cost-cent {
   font-size: small;
   margin-left: 2px;
 }
-#cardList .card:hover {
+#cardList button:hover {
   transform: translateY(-5px);
 }
 
@@ -243,5 +244,89 @@ footer p {
 #resultCount span {
   margin: 0 4px;
   font-weight: bold;
+  color: var(--mhfd-dark-blue);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal .modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.modal .modal-content h2 {
+  color: var(--mhfd-dark-blue);
+  margin-bottom: 1rem;
+}
+.modal .modal-content p {
+  margin-bottom: 0.75rem;
+  color: var(--mhfd-dark-blue);
+}
+.modal .modal-content p strong {
+  font-weight: bold;
+}
+.modal .modal-content pre {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+.modal .modal-content pre code {
+  font-family: "Courier New", Courier, monospace;
+  color: var(--mhfd-dark-blue);
+}
+.modal .modal-content .modal-image {
+  max-width: 100px;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+.modal .modal-content .card-difficulty {
+  display: inline;
+  font-weight: bold;
+  text-transform: capitalize;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+.modal .modal-content .card-difficulty.easy {
+  color: green;
+  background-color: rgba(0, 128, 0, 0.1);
+}
+.modal .modal-content .card-difficulty.medium {
+  color: orange;
+  background-color: rgba(255, 165, 0, 0.1);
+}
+.modal .modal-content .card-difficulty.hard {
+  color: red;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+.modal .modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.2s;
+}
+.modal .modal-close:hover {
   color: var(--mhfd-dark-blue);
 }/*# sourceMappingURL=style.css.map */
