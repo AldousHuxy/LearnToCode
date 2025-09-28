@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Module 1 - Intro to Programming</title>
+        <title>Module 1 | Intro to Programming</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -14,14 +14,13 @@
         <hr />
         <main>
             <section>
-                <h2>Welcome to District<span>Net</span>!</h2>
+                <h2>Welcome to the District<span>Net</span>!</h2>
                 <p><span>Objectives: </span>
                 <ul>
-                    <li id="module"><span>Module 1:</span> Understand some basics concepts and vernacular used in computer science</li>
-                    <li id="module"><span>Module 2:</span> Explore why there are so many different programming languages</li>
-                    <li id="module"><span>Module 3:</span> Learn a bit about computers under the hood</li>
-                    <li id="module"><span>Module 4:</span> Get a glimpse into the daily tasks and responsibilities of a software developer</li>
-                    <li id="module"><span>Module 5:</span> Pull back the curtain on the "backend"</li>
+                    <li><span>Module 1 - Intro to Programming:</span> Understand some obscure terms, the daily life of a software developer and interesting facts about computing</li>
+                    <li><span>Module 2 - The Tools of the Trade:</span> Explore why there are so many different programming languages</li>
+                    <li><span>Module 3 - Under the Hood:</span> Learn about about bits and bytes of what drives our technology</li>
+                    <li><span>Interactive Activity:</span> Build a CFS Flow Converter web application using HTML, CSS, and JavaScript</li>
                 </ul>
                 </p>
             </section>
@@ -34,9 +33,9 @@
                 <ul class="obscure-terms" style="display: none;">
                     <ul>
                         <li><b>Full-Stack:</b> Refers to a developer who is capable of working on both the frontend and backend of an application.</li>
-                        <li><b>Server:</b> A computer that provides resources to other computers, known as clients.</li>
+                        <li><b>Frontend, Client, or UI:</b> The part of a web application that users interact with directly.</li>
+                        <li><b>Backend, Server, or API:</b> An application that communicates with other computers or databases.</li>
                         <li><b>Framework/Library:</b> A pre-built collection of code and tools that developers use to simplify the development process.</li>
-                        <li><b>API (Application Programming Interface):</b> An application built specifically to allow other applications (or databases) to interact with it.</li>
                         <li><b>Compiling:</b> The process of converting human-readable code into machine code.</li>
                         <li><b>HTML/CSS/JS:</b> The foundational technologies for building web pages: HTML for structure, CSS for styling, and JavaScript for interactivity.</li>
                     </ul>
@@ -44,11 +43,88 @@
             </section>
             <section>
                 <div>
+                    <h2>A Day in the Life of a Software Developer</h2>
+                    <button id="dailyLifeButton">Show</button>
+                </div>
+                <h4>The Mile High Flood District is a tech company, producing innovative software solutions that our partners rely on.</h4>
+                <ul class="daily-life" style="display: none;">
+                    <li>
+                        <div><b>Frontend Developer:</b></div>
+                        <ul>
+                            <li>Consuming APIs and integrating with backend services to render dynamic content.</li>
+                            <li>Understanding page layout, responsive design, and UI/UX principles.</li>
+                            <li>Handling user input and form validation.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div><b>Backend Developer:</b></div>
+                        <ul>
+                            <li>Managing APIs and ensuring they are interfacing correctly with the frontend.</li>
+                            <li>Communicating with databases to retrieve and store data.</li>
+                            <li>Ensuring secure data transmission and storage practices.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div><b>DevOps Engineer:</b></div>
+                        <ul>
+                            <li>Setting up and maintaining cloud infrastructure.</li>
+                            <li>Automating deployment processes to ensure smooth releases.</li>
+                            <li>Monitoring application performance and scalability.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div><b>Data Scientist:</b></div>
+                        <ul>
+                            <li>Collecting and analyzing large sets of data to identify trends and insights.</li>
+                            <li>Building predictive models using machine learning algorithms.</li>
+                            <li>Communicating findings to stakeholders through data visualization.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div><b>QA Engineer:</b></div>
+                        <ul>
+                            <li>Creating and executing test plans to ensure software quality.</li>
+                            <li>Identifying and documenting bugs and issues.</li>
+                            <li>Collaborating with developers to resolve defects.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div><b>Project Manager:</b></div>
+                        <ul>
+                            <li>Coordinating between different teams to ensure project milestones are met.</li>
+                            <li>Managing timelines, budgets, and resources.</li>
+                            <li>Communicating progress and updates to stakeholders.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div><b>Database Administrator:</b></div>
+                        <ul>
+                            <li>Managing and maintaining database systems.</li>
+                            <li>Ensuring data security and integrity.</li>
+                            <li>Optimizing database performance and scalability.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <div>
+                    <h2>Did You Know?</h2>
+                    <button id="funFactsButton">Show</button>
+                </div>
+                <h4>Computer history is full of fascinating facts and milestones.</h4>
+                <ul class="fun-facts" style="display: none;">
+                    <img src="https://tse4.mm.bing.net/th/id/OIP.JXq4BPjsugpHH73c6mBlEgHaFz?cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="ENIAC">
+                    <li>The ENIAC (Electronic Numerical Integrator and Computer), built in 1945, was the first general-purpose electronic computer capable of performing more calculations per second than a human could in a lifetime.</li>
+                    <li>The term "bug" in coding originated when a real moth was found causing issues in an early computer.</li>
+                    <li>The first message sent across the internet was <a href="https://www.imdb.com/title/tt5275828/">"LO"</a> in 1969, when researchers tried to send "LOGIN" but the system crashed after the first two letters.</li>
+                </ul>
+            </section>
+            <section>
+                <div>
                     <h2>Interactive Activity: To Do List</h2>
                     <button id="interactiveActivityButton">Show</button>
                 </div>
-                <h4>Today we will create a simple To Do List application using HTML, CSS, and JavaScript.</h4>
-                <h4>We'll start simple with the the basic syntax for each technology.</h4>
+                <h4>Let's take a look an of example of Hyper-Text Markup Language, Cascading Style Sheets, and JavaScript.</h4>
                 <code class="interactive-activity" style="display: none;">
                     &lt;!-- HTML is the standard markup language for creating web pages. --&gt;<br>
                     &lt;!-- HTML tags provide the structure for web content. --&gt;<br>
@@ -88,18 +164,6 @@
                     var message = "Hello, World!";<br>
                     console.log(message);
                 </code>
-            </section>
-            <section>
-                <div>
-                    <h2>Did You Know?</h2>
-                    <button id="funFactsButton">Show</button>
-                </div>
-                <ul class="fun-facts" style="display: none;">
-                    <img src="https://tse4.mm.bing.net/th/id/OIP.JXq4BPjsugpHH73c6mBlEgHaFz?cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="ENIAC">
-                    <li>The ENIAC (Electronic Numerical Integrator and Computer), built in 1945, was the first general-purpose electronic computer capable of performing more calculations per second than a human could in a lifetime.</li>
-                    <li>The term "bug" in coding originated when a real moth was found causing issues in an early computer.</li>
-                    <li>The first message sent across the internet was <a href="https://www.imdb.com/title/tt5275828/">"LO"</a> in 1969, when researchers tried to send "LOGIN" but the system crashed after the first two letters.</li>
-                </ul>
             </section>
         </main>
         <script>

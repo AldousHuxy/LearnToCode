@@ -14,13 +14,16 @@
 ### Module 3 - Under The Hood (0:15 - 0:20)
  - Talk about various counting systems and why binary is optimal
  - Explore logic gates the building blocks of computers
- - Understand levels of abstraction
+ - Understand levels of abstraction in a computer
 
 ### Module 4 - A Day In The Life (0:20 - 0:25)
- - 
+ - What does a full stack developer do exactly?
 
 ### Module 5 - Behind The Scenes:  (0:25 - 0:30)
+ - Take a look at a RESTful API to understand CRUD
 
 ### Interactive Project (0:30 - 0:50)
+ - We'll build a to do list application
 
 ### Questions & Closing (0:50 - 1:00)
+ -  Answer any questions

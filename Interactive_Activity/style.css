@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Aptos Serif';
+    src: url('Aptos-Serif-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+:root {
+    --mhfd-dark-blue: #06242D;
+    --mhfd-purple: #80A7F7;
+    --mhfd-blue: #62b4cc;
+    --medium-green: #29C499;
+    --medium-taupe: #A29F8B;
+    --soft-purple: #B6AEE3;
+    --soft-blue: #66D4FF;
+    --soft-teal: #66E0D5;
+    --bright-yellow: #FFDD00;
+    --deep-purple: #251863;
+    --deep-blue: #0079A8;
+    --deep-green: #1C8281;
+    --deep-taupe: #787263;
+    --mhfd-gradient: linear-gradient(90deg, var(--mhfd-purple), var(--mhfd-blue));
+}
+
+* {
+    font-family: 'Aptos Serif';
+}
+
+body {
+    background-color: gray;
+    color: white;
+}
+
+header {
+    background: var(--mhfd-dark-blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+
+}
+
+header img {
+    height: 50px;
+}
+
+header div {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.bg-deep-green {
+    background: var(--deep-green);
+}
+
+.bg-medium-green {
+    background: var(--medium-green);
+}
+
+.bg-soft-teal {
+    background: var(--soft-teal);
+}

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Interactive Activity | CFS Flow Converter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+        <img src="MHFD-Logo.png" alt="MHFD Logo">
+        <div id="title">Flow Converter</div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <form>
+                    <div class="form-group my-4">
+                        <input id="lbsInput" type="number" class="form-control form-control-lg" placeholder="Enter Flow Amount to Convert...">
+                    </div>
+                </form>
+                <div id="output">
+                    <div class="card bg-deep-green mb-2">
+                        <div class="card-body">
+                            <h4>Cubic Feet per Second:</h4>
+                            <div id="cfsOutput"></div>
+                        </div>
+                    </div>
+                    <div class="card bg-medium-green mb-2">
+                        <div class="card-body">
+                            <h4>Gallons per Minute:</h4>
+                            <div id="gpmOutput"></div>
+                        </div>
+                    </div>
+                    <div class="card bg-soft-teal mb-2">
+                        <div class="card-body">
+                            <h4>Barrel per Day:</h4>
+                            <div id="bpdOutput"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
