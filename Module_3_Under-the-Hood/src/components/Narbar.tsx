@@ -5,8 +5,8 @@ const LINKS = [
     { to: ROUTES.BINARY, label: 'Binary' },
     { to: ROUTES.MEMORY, label: 'Memory' },
     { to: ROUTES.LOGIC_GATES, label: 'Logic Gates' },
-    { to: ROUTES.ARITHMETIC_LOGIC_UNIT, label: 'Arithmetic Logic Unit' },
-    { to: ROUTES.CENTRAL_PROCESSING_UNIT, label: 'Central Processing Unit' },
+    { to: ROUTES.LOGIC_UNITS, label: 'Logic Units' },
+    { to: ROUTES.SOFTWARE, label: 'Software' },
 ]
 
 export const Navbar = () => {

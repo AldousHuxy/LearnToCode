@@ -5,8 +5,13 @@ document.getElementById('output').style.visibility = 'hidden'
 
 document.getElementById('lbsInput').addEventListener('input', function(event) {
     let cfs = event.target.value
+
+    if (cfs === '') {
+        document.getElementById('output').style.visibility = 'hidden'
+    } else {
+        document.getElementById('output').style.visibility = 'visible'
+    }
     
-    document.getElementById('output').style.visibility = 'visible'
     document.getElementById('cfsOutput').innerHTML = cfs + ' ft/s<sup>3</sup>'
     document.getElementById('gpmOutput').innerHTML = cfs * 448.831173401 + ' gal/min'
     document.getElementById('bpdOutput').innerHTML = cfs / 5.6145832761677 + ' bbl/day'

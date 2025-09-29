@@ -4,6 +4,6 @@ export default {
     BINARY: '/binary',
     MEMORY: '/memory',
     LOGIC_GATES: '/logic-gates',
-    ARITHMETIC_LOGIC_UNIT: '/arithmetic-logic-unit',
-    CENTRAL_PROCESSING_UNIT: '/central-processing-unit',
+    LOGIC_UNITS: '/logic-units',
+    SOFTWARE: '/software',
 }
