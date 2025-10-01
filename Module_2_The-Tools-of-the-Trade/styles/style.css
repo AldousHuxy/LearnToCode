@@ -154,6 +154,7 @@ footer p {
 }
 .history .history-block p {
   font-style: italic;
+  color: rgb(69, 69, 69);
 }
 
 #cardList {

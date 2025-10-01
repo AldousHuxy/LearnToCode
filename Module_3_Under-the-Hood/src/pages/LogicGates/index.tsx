@@ -1,117 +1,66 @@
 import { useState } from "react";
-import { InfoCard } from "@/components/InfoCard";
+import { Gate } from "./Gate";
+import { ALUTable } from "./ALUTable";
+
+type View = 'GRAPHIC'|'IMAGE'
+export type GateType = 'AND'|'OR'
 
 const LogicGates = () => {
   const link: string = "https://academo.org/demos/logic-gate-simulator/";
-
+  const imgURL: string = 'https://upload.wikimedia.org/wikipedia/commons/d/d7/SN74S181N.JPG'
+  const [gateType, setGateType] = useState<GateType>('AND')
   const [inputA, setInputA] = useState<boolean>(false)
   const [inputB, setInputB] = useState<boolean>(false)
+  const [view, setView] = useState<View>('GRAPHIC')
   
   const output: boolean = inputA && inputB
 
   const handleInputAClick = () => setInputA(prev => !prev)
-
   const handleInputBClick = () => setInputB(prev => !prev)
+  const switchView = () => setView(prev => prev === 'GRAPHIC' ? 'IMAGE' : 'GRAPHIC')
+  const switchGateType = () => setGateType(prev => prev === 'AND' ? 'OR' : 'AND')
 
   return (
     <>
       <a href={link} target="_blank" rel="noopener noreferrer">
         <h1 className="text-4xl font-bold mb-4 text-center text-mhfd-dark-blue">Gateway to Complexity</h1>
-        <InfoCard list={[
-          <>Logic Gates are the building blocks of digital circuits.</>,
-          <>The common types of logic gates are AND, OR, NOT, NAND, NOR, XOR, and XNOR.</>,
-          <>They are used to perform basic operations on binary inputs.</>
-        ]} />
       </a>
       
       <div className="flex flex-col items-center mt-8 p-6 bg-gray-100 rounded-lg">
-        <h2 className="text-2xl font-bold mb-4 text-mhfd-dark-blue">AND Gate</h2>
-        <div className="flex flex-row gap-8">
-          <svg width="300" height="200" viewBox="0 0 300 200" className="border border-gray-300 bg-white rounded">
-            <path
-              d="M 50 60 L 50 140 L 120 140 A 40 40 0 0 0 120 60 Z"
-              fill="#e5e7eb"
-              stroke="#374151"
-              strokeWidth="2"
-            />
-            
-            <line x1="10" y1="80" x2="50" y2="80" stroke="#374151" strokeWidth="2" />
-            
-            <line x1="10" y1="120" x2="50" y2="120" stroke="#374151" strokeWidth="2" />
-            
-            <line x1="160" y1="100" x2="250" y2="100" stroke="#374151" strokeWidth="2" />
-            
-            <circle
-              cx="10"
-              cy="80"
-              r="8"
-              fill={inputA ? "#22c55e" : "#ef4444"}
-              stroke="#374151"
-              strokeWidth="2"
-              className="cursor-pointer hover:opacity-80"
-              onClick={handleInputAClick}
-            />
-            
-            <circle
-              cx="10"
-              cy="120"
-              r="8"
-              fill={inputB ? "#22c55e" : "#ef4444"}
-              stroke="#374151"
-              strokeWidth="2"
-              className="cursor-pointer hover:opacity-80"
-              onClick={handleInputBClick}
-            />
-            
-            <circle
-              cx="250"
-              cy="100"
-              r="8"
-              fill={output ? "#22c55e" : "#ef4444"}
-              stroke="#374151"
-              strokeWidth="2"
-            />
-            
-            <text x="10" y="65" textAnchor="middle" className="text-sm font-bold fill-gray-700">A</text>
-            <text x="10" y="145" textAnchor="middle" className="text-sm font-bold fill-gray-700">B</text>
-            <text x="250" y="85" textAnchor="middle" className="text-sm font-bold fill-gray-700">OUT</text>
-            <text x="105" y="105" textAnchor="middle" className="text-sm font-bold fill-gray-700">AND</text>
-          </svg>
-          
-          <div>
-            <table className="border-collapse border border-gray-300">
-              <thead>
-                <tr className="bg-gray-200">
-                  <th className="border border-gray-300 px-4 py-2">Input A</th>
-                  <th className="border border-gray-300 px-4 py-2">Input B</th>
-                  <th className="border border-gray-300 px-4 py-2">Output</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className={inputA === false && inputB === false ? "bg-yellow-200" : ""}>
-                  <td className="border border-gray-300 px-4 py-2 text-center">0</td>
-                  <td className="border border-gray-300 px-4 py-2 text-center">0</td>
-                  <td className="border border-gray-300 px-4 py-2 text-center">0</td>
-                </tr>
-                <tr className={inputA === false && inputB === true ? "bg-yellow-200" : ""}>
-                  <td className="border border-gray-300 px-4 py-2 text-center">0</td>
-                  <td className="border border-gray-300 px-4 py-2 text-center">1</td>
-                  <td className="border border-gray-300 px-4 py-2 text-center">0</td>
-                </tr>
-                <tr className={inputA === true && inputB === false ? "bg-yellow-200" : ""}>
-                  <td className="border border-gray-300 px-4 py-2 text-center">1</td>
-                  <td className="border border-gray-300 px-4 py-2 text-center">0</td>
-                  <td className="border border-gray-300 px-4 py-2 text-center">0</td>
-                </tr>
-                <tr className={inputA === true && inputB === true ? "bg-yellow-200" : ""}>
-                  <td className="border border-gray-300 px-4 py-2 text-center">1</td>
-                  <td className="border border-gray-300 px-4 py-2 text-center">1</td>
-                  <td className="border border-gray-300 px-4 py-2 text-center">1</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+        <div className="flex flex-row justify-between items-center w-full mb-4">
+          {view === 'GRAPHIC' ?
+            <button type="button" onClick={switchGateType} className="cursor-pointer mb-4 px-4 py-2 bg-medium-green text-white rounded hover:bg-mhfd-blue transition-colors">
+              {gateType === 'AND' ? 'OR' : 'AND'} Gate
+            </button>
+          :
+            <div></div>}
+          <h2 className="text-2xl font-bold mb-4 text-mhfd-dark-blue">{view === 'GRAPHIC' ? (gateType === 'AND' ? 'AND Gate' : 'OR Gate') : 'Arithmetic Logic Unit'}</h2>
+          <button type="button" onClick={switchView} className="cursor-pointer mb-4 px-4 py-2 bg-medium-green text-white rounded hover:bg-mhfd-blue transition-colors">
+            {view === 'GRAPHIC' ? 'ALU' : 'AND Gate'}
+          </button>
         </div>
+        {view === 'GRAPHIC' ?
+          <p className="mb-6 text-center text-gray-700">The 3 main types of Logic Gate are AND, OR, and NOT.</p>
+          :
+          <p className="mb-6 text-center text-gray-700">An ALU is a critical component of a computer's CPU that performs arithmetic and logical operations on binary data.</p>}
+        {view === 'GRAPHIC' ?
+          <div className="flex flex-row gap-8">
+            <Gate
+              gateType={gateType}
+              inputA={inputA}
+              inputB={inputB}
+              output={output}
+              handleInputAClick={handleInputAClick}
+              handleInputBClick={handleInputBClick}
+            />
+            <ALUTable
+              gateType={gateType}
+              inputA={inputA}
+              inputB={inputB}
+            />
+          </div>
+        :
+          <img src={imgURL} alt="Logic Gate Example" className="border border-gray-300 bg-white rounded max-w-full h-auto" />}
       </div>
     </>
   )

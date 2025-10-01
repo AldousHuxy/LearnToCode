@@ -1,18 +1,18 @@
 import ROUTES from '@/routes';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const LINKS = [
     { to: ROUTES.BINARY, label: 'Binary' },
     { to: ROUTES.MEMORY, label: 'Memory' },
-    { to: ROUTES.LOGIC_GATES, label: 'Logic Gates' },
-    { to: ROUTES.LOGIC_UNITS, label: 'Logic Units' },
-    { to: ROUTES.SOFTWARE, label: 'Software' },
+    { to: ROUTES.LOGIC_GATES, label: 'Logic Gates' }
 ]
 
 export const Navbar = () => {
+    const { pathname } = useLocation()
+    
     return (
-        <div className="flex justify-around p-4 bg-mhfd-blue text-mhfd-dark-blue text-lg font-semibold">
-            {LINKS.map(({ to, label }) => <NavLink key={label} to={to} className="hover:underline">{label}</NavLink>)}
+        <div className="flex justify-start gap-6 p-4 bg-mhfd-blue text-mhfd-dark-blue text-lg font-semibold">
+            {LINKS.map(({ to, label }) => <NavLink key={label} to={to} className={`${pathname === to ? 'text-bright-yellow text-xl' : ''}`}>{label}</NavLink>)}
         </div>
     )
 }
